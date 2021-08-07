@@ -14,14 +14,13 @@
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
-<!-- 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class> -->
-		<listener-class>override.ContextLoaderListener2</listener-class>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 		
 	<!-- Spring Security -->
 	<filter>
 	   <filter-name>springSecurityFilterChain</filter-name>
-	   <filter-class>override.DelegatingFilterProxy2</filter-class>
+	   <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 	</filter>
 	
 	<filter-mapping>
@@ -32,7 +31,7 @@
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
-		<servlet-class>override.DispatcherServlet2</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>

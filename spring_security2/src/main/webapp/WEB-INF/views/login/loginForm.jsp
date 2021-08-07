@@ -26,7 +26,7 @@
     </p>
     <p>
         <label for="password">비밀번호</label>
-        <input type="password" id="password" name="password"/>
+        <input type="password" id="password" name="password" value="password"/>
     </p>
     <%-- <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" /> --%>
     <button type="submit" class="btn">로그인</button>
